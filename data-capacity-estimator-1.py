@@ -81,5 +81,6 @@ if st.button("🚀 Calculate Capacity"):
 
 st.markdown("""
 ---
-😎 **Pro Tip**: Use the buttons to calculate or reset. Save your results to CSV for later reference!
+**Tip**: Use the buttons to calculate or reset to defaults. Save your results to CSV for later reference!
+Cheers, with love ❤️ from kochrisdev 😎
 """)
