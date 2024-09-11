@@ -36,7 +36,10 @@ st.title("📊Data Capacity Estimator 123💡")
 st.markdown("""
 Welcome to the **Data Capacity Estimator 123**! Input your transaction's details below and see how much data you need today and in the future!
 """)
-
+# Reset button action
+if st.button("🔄 Reset to Defaults"):
+    st.session_state.update(default_values)
+  
 # Define default values
 default_values = {
     'current_users': 100000,
@@ -75,10 +78,6 @@ if st.button("🚀 Calculate Capacity"):
     # CSV download option
     csv = data_df.to_csv(index=False).encode('utf-8')
     st.download_button("💾 Download as CSV", csv, "data_capacity_results.csv", "text/csv", key='download-csv')
-
-# Reset button action
-if st.button("🔄 Reset to Defaults"):
-    st.session_state.update(default_values)
 
 st.markdown("""
 ---
