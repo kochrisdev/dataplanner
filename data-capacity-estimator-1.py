@@ -31,10 +31,10 @@ def calculate_data_capacity(current_users, daily_transactions_per_user, average_
     }
 
 # Streamlit UI
-st.title("📊 Fun Data Capacity Estimator for Payment Service 💡")
+st.title("📊 Data Capacity Estimator 123 💡")
 
 st.markdown("""
-Welcome to the **Data Capacity Estimator**! Input your service's details below and see how much data you need today and in the future!
+Welcome to the **Data Capacity Estimator**! Input your data transaction details below and see how much data you need today and in the future!
 """)
 
 # Define default values
