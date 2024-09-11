@@ -31,10 +31,10 @@ def calculate_data_capacity(current_users, daily_transactions_per_user, average_
     }
 
 # Streamlit UI
-st.title("📊 Fun Data Capacity Estimator for Payment Service 💡")
+st.title("📊Data Capacity Estimator 123💡")
 
 st.markdown("""
-Welcome to the **Data Capacity Estimator**! Input your service's details below and see how much data you need today and in the future!
+Welcome to the **Data Capacity Estimator 123**! Input your transaction's details below and see how much data you need today and in the future!
 """)
 
 # Define default values
@@ -51,9 +51,6 @@ default_values = {
 if 'current_users' not in st.session_state:
     st.session_state.update(default_values)
 
-# Reset button action
-if st.button("🔄 Reset to Defaults"):
-    st.session_state.update(default_values)
 
 # Input widgets bound to session state
 current_users = st.number_input("👥 Current Number of Users", value=st.session_state['current_users'], key="current_users")
@@ -78,6 +75,10 @@ if st.button("🚀 Calculate Capacity"):
     # CSV download option
     csv = data_df.to_csv(index=False).encode('utf-8')
     st.download_button("💾 Download as CSV", csv, "data_capacity_results.csv", "text/csv", key='download-csv')
+
+# Reset button action
+if st.button("🔄 Reset to Defaults"):
+    st.session_state.update(default_values)
 
 st.markdown("""
 ---
